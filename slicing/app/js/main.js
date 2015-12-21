@@ -17,3 +17,10 @@ $(document).ready(function(){
 		columns: 2
 	});
 });
+
+$(window).load(function() {
+
+	$(".loader_inner").fadeOut();
+	$(".loader").delay(800).fadeOut("slow");
+
+});
