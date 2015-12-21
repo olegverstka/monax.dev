@@ -1,0 +1,125 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$s-ico-1-name: 's-ico-1';
+$s-ico-1-x: 77px;
+$s-ico-1-y: 0px;
+$s-ico-1-offset-x: -77px;
+$s-ico-1-offset-y: 0px;
+$s-ico-1-width: 13px;
+$s-ico-1-height: 19px;
+$s-ico-1-total-width: 90px;
+$s-ico-1-total-height: 54px;
+$s-ico-1-image: '../img/sprite.png';
+$s-ico-1: (77px, 0px, -77px, 0px, 13px, 19px, 90px, 54px, '../img/sprite.png', 's-ico-1', );
+$s-ico-2-name: 's-ico-2';
+$s-ico-2-x: 0px;
+$s-ico-2-y: 36px;
+$s-ico-2-offset-x: 0px;
+$s-ico-2-offset-y: -36px;
+$s-ico-2-width: 18px;
+$s-ico-2-height: 18px;
+$s-ico-2-total-width: 90px;
+$s-ico-2-total-height: 54px;
+$s-ico-2-image: '../img/sprite.png';
+$s-ico-2: (0px, 36px, 0px, -36px, 18px, 18px, 90px, 54px, '../img/sprite.png', 's-ico-2', );
+$s-ico-3-name: 's-ico-3';
+$s-ico-3-x: 42px;
+$s-ico-3-y: 39px;
+$s-ico-3-offset-x: -42px;
+$s-ico-3-offset-y: -39px;
+$s-ico-3-width: 15px;
+$s-ico-3-height: 15px;
+$s-ico-3-total-width: 90px;
+$s-ico-3-total-height: 54px;
+$s-ico-3-image: '../img/sprite.png';
+$s-ico-3: (42px, 39px, -42px, -39px, 15px, 15px, 90px, 54px, '../img/sprite.png', 's-ico-3', );
+$s-ico-4-name: 's-ico-4';
+$s-ico-4-x: 42px;
+$s-ico-4-y: 0px;
+$s-ico-4-offset-x: -42px;
+$s-ico-4-offset-y: 0px;
+$s-ico-4-width: 15px;
+$s-ico-4-height: 19px;
+$s-ico-4-total-width: 90px;
+$s-ico-4-total-height: 54px;
+$s-ico-4-image: '../img/sprite.png';
+$s-ico-4: (42px, 0px, -42px, 0px, 15px, 19px, 90px, 54px, '../img/sprite.png', 's-ico-4', );
+$s-ico-5-name: 's-ico-5';
+$s-ico-5-x: 0px;
+$s-ico-5-y: 0px;
+$s-ico-5-offset-x: 0px;
+$s-ico-5-offset-y: 0px;
+$s-ico-5-width: 22px;
+$s-ico-5-height: 16px;
+$s-ico-5-total-width: 90px;
+$s-ico-5-total-height: 54px;
+$s-ico-5-image: '../img/sprite.png';
+$s-ico-5: (0px, 0px, 0px, 0px, 22px, 16px, 90px, 54px, '../img/sprite.png', 's-ico-5', );
+$spritesheet-width: 90px;
+$spritesheet-height: 54px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($s-ico-1, $s-ico-2, $s-ico-3, $s-ico-4, $s-ico-5, );
+$spritesheet: (90px, 54px, '../img/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
