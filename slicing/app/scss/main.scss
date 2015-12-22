@@ -78,13 +78,13 @@ html.js .loader_inner, html.js .loader_inner::before, html.js .loader_inner::aft
 	border-radius: 50%;
 }
 html.js .loader_inner {
-    border-top-color: #bac900;
-    height: 150px;
-    left: 50%;
-    margin: -75px 0 0 -75px;
-    position: absolute;
-    top: 50%;
-    width: 150px;
+	border-top-color: #bac900;
+	height: 150px;
+	left: 50%;
+	margin: -75px 0 0 -75px;
+	position: absolute;
+	top: 50%;
+	width: 150px;
 	-webkit-animation: spin 1s infinite linear;
 	animation: spin 1s infinite linear;
 
@@ -142,6 +142,41 @@ body {
 	font: 12px/18px Arial, sans-serif;
 	width: 100%;
 	height: 100%;
+}
+.modal {
+	display: none;
+	h2 {
+		text-align: center;
+	}
+}
+.control {
+	margin: 0 0 10px 0;
+}
+label {
+	display: block;
+}
+input[type=text],
+input[type=password] {
+	background: #fff;
+	border: 1px solid #d3d3d3;
+	border-radius: 8px;
+	height: 29px;
+	padding: 0 8px;
+	width: 92%;
+}
+input[type=submit] {
+	background-color: #85024f;
+	background-image: linear-gradient(to top, #85024f 0px, #eb008b 100%);
+	border: none;
+	border-radius: 10px;
+	color: #fff;
+	font: 17px Arial;
+	padding: 11px 26px;
+	text-decoration: none;
+	text-transform: uppercase;
+	&:hover {
+		background-image: linear-gradient(to top, #eb008b 0px, #85024f 100%);
+	}
 }
 .wrapper {
 	width: 1280px;
@@ -282,8 +317,10 @@ h1 {
 			}
 			input[type=submit] {
 				background-color: #fff;
+				border-radius: none;
 				@include sprite($s-ico-3);
 				border: none;
+				padding: 0;
 				position: absolute;
 				right: 10px;
 				text-indent: -9999px;
@@ -553,17 +590,22 @@ h1 {
 		input[type=text] {
 			background: #fff;
 			border: 2px solid #000;
+			border-radius: 0;
 			color: #989694;
 			font: 13px Arial;
+			height: auto;
 			padding: 9px 13px;
 			width: 230px;
 		}
 		input[type=submit] {
 			background: #000;
 			border: none;
+			border-radius: 0;
 			color: #fff;
 			font: 13px Arial;
 			padding: 11px 17px;
+			text-decoration: none;
+			text-transform: none
 		}
 	}
 }

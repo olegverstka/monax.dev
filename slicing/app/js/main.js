@@ -1,18 +1,28 @@
-$(window).load(function() {
+jQuery(window).load(function() {
 
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
+	jQuery(".loader_inner").fadeOut();
+	jQuery(".loader").delay(400).fadeOut("slow");
 
 });
 
-$(document).ready(function(){
-	
-	$(".select").selecter();
+jQuery(document).ready(function(){
 
-	$(".bxSlider").bxSlider({
+	jQuery(".login").fancybox({
+ 		'scrolling' : 'no',
+		'titleShow'	: false,
+		'onClosed'	: function() {
+		    jQuery(".modal").hide();
+		}
+ 	});
+
+ 	jQuery(".fancy").fancybox();
+	
+	jQuery(".select").selecter();
+
+	jQuery(".bxSlider").bxSlider({
 		'pager'        : false
 	});
-	$(".hitSlider").bxSlider({
+	jQuery(".hitSlider").bxSlider({
 		'useCSS'       : false,
 		'minSlides'    : 5,
 		'maxSlides'    : 5,
@@ -20,7 +30,7 @@ $(document).ready(function(){
 		'slideWidth'   : 225,
 		'infiniteLoop' : true
 	});
-	$('.foot_menu ul').autocolumnlist({
+	jQuery('.foot_menu ul').autocolumnlist({
 		columns: 2
 	});
 });

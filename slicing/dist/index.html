@@ -15,6 +15,26 @@
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
+		<div id="auth" class="modal">
+			<h2>Авторизоваться</h2>
+			<div class="modal_content">
+				<p>Для авторизации на сайте заполните поля!</p>
+				<form action="#" method="POST">
+					<div class="control">
+						<label for="">Логин</label>
+						<input type="text" name="login">
+					</div>
+					<div class="control">
+						<label for="">Пароль</label>
+						<input type="password" name="pass">
+					</div>
+					<div class="control">
+						<input type="submit" value="Войти">
+					</div>
+				</form>
+			</div>
+		</div>
+
 		<div class="wrapper">
 
 			<header class="header">
@@ -26,7 +46,7 @@
 						</select>
 					</div>
 					<div class="right">
-						<a class="auth" href="#"><i></i>Войти</a>
+						<a class="auth fancy" href="#auth"><i></i>Войти</a>
 						<a class="cart" href="#"><i></i>Корзина <span>0 руб.</span></a>
 					</div>
 				</div><!-- .head-top -->
@@ -190,7 +210,6 @@
 		</div>
 
 		<script src="js/vendor.js"></script>
-
 		<script src="js/main.js"></script>
 	</body>
 </html>
