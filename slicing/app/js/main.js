@@ -1,3 +1,10 @@
+$(window).load(function() {
+
+	$(".loader_inner").fadeOut();
+	$(".loader").delay(400).fadeOut("slow");
+
+});
+
 $(document).ready(function(){
 	
 	$(".select").selecter();
@@ -16,11 +23,4 @@ $(document).ready(function(){
 	$('.foot_menu ul').autocolumnlist({
 		columns: 2
 	});
-});
-
-$(window).load(function() {
-
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(800).fadeOut("slow");
-
 });

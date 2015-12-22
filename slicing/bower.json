@@ -24,6 +24,7 @@
     "bxslider-4": "bx-slider.js#~4.2.5",
     "normalize-css": "normalize.css#~3.0.3",
     "modernizr": "~3.2.0",
-    "Selecter": "~3.2.4"
+    "Selecter": "~3.2.4",
+    "animate.css": "~3.5.0"
   }
 }
