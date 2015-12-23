@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>EXT Owl Carousel products for JoomShopping</name>
+	<author>Eco-Joom.com</author>
+	<creationDate>04/12/2013</creationDate>
+	<copyright>Copyright (C) 2011-2015 Eco-Joom.com. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>extjoom@gmail.com</authorEmail>
+	<authoralt>https://eco-joom.com/</authoralt>
+	<version>1.1</version>
+	<description>EXT Owl Carousel products for JoomShopping (jQuery)</description>
+	<files>	
+		<filename module="mod_ext_owl_carousel_jshopping_products">mod_ext_owl_carousel_jshopping_products.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>mod_ext_owl_carousel_jshopping_products.php</filename>
+		<filename>mod_ext_owl_carousel_jshopping_products.xml</filename>
+		<folder>assets</folder>
+		<folder>element</folder>
+		<folder>tmpl</folder>    
+    </files>
+	
+	<languages>	
+		<language tag="en-GB">en-GB.mod_ext_owl_carousel_jshopping_products.ini</language>
+		<language tag="en-GB">en-GB.mod_ext_owl_carousel_jshopping_products.sys.ini</language>
+		<language tag="ru-RU">ru-RU.mod_ext_owl_carousel_jshopping_products.ini</language>
+		<language tag="ru-RU">ru-RU.mod_ext_owl_carousel_jshopping_products.sys.ini</language>	
+	</languages>
+		
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				
+				
+				<field
+					name="ext_load_jquery"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_LOAD_JQ_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_LOAD_JQ_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="ext_jquery_ver"
+					type="text"
+					default="1.9.1"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_JQUERYVER_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_JQUERYVER_DESC" />
+
+				<field
+					name="ext_load_base"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_LOAD_BASE_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_LOAD_BASE_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				
+				
+				<field
+					name="ext_navigation"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_NAVIGATION_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_NAVIGATION_DESC" >
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="ext_pagination"
+					type="radio"
+					default="true"
+					class="btn-group"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_PAGINATION_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_PAGINATION_DESC" >
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="ext_paginationnumbers"
+					type="radio"
+					default="false"
+					class="btn-group"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_PAGINATIONNUMBERS_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_PAGINATIONNUMBERS_DESC" >
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				
+				
+				<field name="ext_products" type="list" default="0"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_PRODUCTS_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_PRODUCTS_DESC"
+					filter="int">
+					<option value="0">last products</option>
+					<option value="1">toprating products</option>
+					<option value="2">bestseller products</option>
+					<option value="3">label products</option>
+				</field>	
+				
+				
+				<field 
+					name="ext_items" 
+					type="text" 
+					default="4" 
+					filter="int"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMS_LABEL" 
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMS_DESC"/>
+
+				<field
+                    name="count_products"
+                    type="text"
+                    label="COUNT"
+                    default = "15"
+                    description="THE_NUMBER_OF_PRODUCTS_IN_ROW" />
+				
+				
+				
+				<field  
+                    name="catids" 
+                    type="categories" 
+                    size="15" 
+                    default=""                    
+                    label="CATEGORIES" 
+                    description="CATEGORIES" 
+                    addfieldpath="/modules/mod_ext_owl_carousel_jshopping_products/element"/>
+				
+				
+				<field  
+                    name="label_id" 
+                    type="labels" 
+                    size="5" 
+                    default=""                    
+                    label="LABEL" 
+                    description="LABEL" 
+                    addfieldpath="/modules/mod_ext_owl_carousel_jshopping_products/element"/>
+				
+				
+				<field 
+					name="ext_label_prod" 
+					default="1"
+					type="radio"
+					class="btn-group"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_LABEL_PROD_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_LABEL_PROD_DESC"
+					filter="int">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="show_image" 
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="SHOW_PRODUCT_IMAGE"
+					description="SHOW_PRODUCT_IMAGE"
+					filter="int">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field 
+					name="ext_short_desc"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_SHORT_DESC_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_SHORT_DESC_DESC"
+					filter="int">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field 
+					name="ext_product_price"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_PRODUCT_PRICE_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_PRODUCT_PRICE_DESC"
+					filter="int">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				
+				
+				<field 
+					name="ext_review_mark" 
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_REVIEW_MARK_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_REVIEW_MARK_DESC"
+					filter="int">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				
+				<field 
+					name="ext_count_commentar" 
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_COUNT_COMMENTAR_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_COUNT_COMMENTAR_DESC"
+					filter="int">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field 
+					name="ext_item_detal" 
+					type="radio"
+					class="btn-group" 
+					default="0"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_ITEM_DETAL_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_ITEM_DETAL_DESC"
+					filter="int">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="ext_buttom_text"
+					type="text"
+					default="Detail"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_BUTTOM_TEXT_LABEL"
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_BUTTOM_TEXT_DESC" />			
+               
+
+				
+				
+
+				
+			</fieldset>
+			
+			<fieldset name="OPTIONS_OWL">
+				<field type="spacer" label="OPTIONS_OWL_PRO_SPACER" />
+				<field type="spacer" label="OPTIONS_OWL_PRO_INFO_SPACER" />
+				
+				<field 
+					name="ext_itemsdesktop" 
+					type="text"
+					disabled="true"
+					default="false"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSDESKTOP_LABEL" 
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSDESKTOP_DESC"/>
+				<field 
+					name="ext_itemsdesktopsmall" 
+					type="text"
+					disabled="true"
+					default="false"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSDESKTOPSMALL_LABEL" 
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSDESKTOP_DESC"/>
+				<field 
+					name="ext_itemstablet" 
+					type="text"
+					disabled="true"
+					default="[768,2]"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSTABLET_LABEL" 
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSDESKTOP_DESC"/>
+				<field 
+					name="ext_itemstabletsmall" 
+					type="text"
+					disabled="true"
+					default="false"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSTABLETSMALL_LABEL" 
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSDESKTOP_DESC"/>
+				<field 
+					name="ext_itemsmobile" 
+					type="text"
+					disabled="true"
+					default="[479,1]"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSMOBILE_LABEL" 
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSDESKTOP_DESC"/>
+				
+				<field 
+					name="ext_itemscustom" 
+					type="textarea"
+					disabled="true"
+					default="false"
+					label="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSCUSTOM_LABEL" 
+					description="MOD_EXT_OWL_CAROUSEL_JSHOPPING_PRODUCTS_FIELD_EXT_ITEMSCUSTOM_DESC"/>	
+				
+				
+				<field type="spacer" label="OPTIONS_OWL_PRO_INFO_BAY_SPACER" />
+				
+				
+				
+			</fieldset>	
+			
+			
+			
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					class="btn-group"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

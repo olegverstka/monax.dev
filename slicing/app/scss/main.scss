@@ -139,7 +139,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 	display: block;
 }
 body {
-	font: 12px/18px Arial, sans-serif;
+	font: 14px/18px Arial, sans-serif;
 	width: 100%;
 	height: 100%;
 }
@@ -164,7 +164,8 @@ input[type=password] {
 	padding: 0 8px;
 	width: 92%;
 }
-input[type=submit] {
+input[type=submit],
+button {
 	background-color: #85024f;
 	background-image: linear-gradient(to top, #85024f 0px, #eb008b 100%);
 	border: none;
@@ -243,7 +244,11 @@ h1 {
 					margin: 0 6px 0 0;
 				}
 			}
+			.mycart_wrapp {
+				display: inline-block;
+			}
 			.cart {
+				border: none;
 				margin: 0 20px 0 0;
 				i {
 					@include sprite($s-ico-2);
@@ -484,7 +489,7 @@ h1 {
 			.banner-text {
 				margin: 50px 0 0;
 			}
-			span {
+			i {
 				display: block;
 				font-size: 30px;
 				text-transform: uppercase;

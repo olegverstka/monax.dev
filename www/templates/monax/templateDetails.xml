@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="template" client="site">
+	<name>MONAX</name>
+	<version>1.0</version>
+	<creationDate>22 desember 2015</creationDate>
+	<author>Balyuk Oleg</author>
+	<authorEmail>olegverstka@yandex.ru</authorEmail>
+	<authorUrl>http://webfrontdev.ru/</authorUrl>
+	<copyright>Copyright (C) 2015 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>TPL_MONAX_DESCTIPTION</description>
+	
+	<files>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>img</folder>
+		<folder>html</folder>
+		<folder>language</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>template_preview.png</filename>
+	</files>
+
+	<positions>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_monax.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_monax.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="site_slider_1" type="media" label="TPL_MONAX_SITESLIDER_1" description="TPL_MONAX_SITESLIDER_DESC_1"></field>
+				<field name="site_slider_1_text" type="text" label="TPL_MONAX_SITESLIDER_1_TEXT" description="TPL_MONAX_SITESLIDER_DESC_1_TEXT"></field>
+				<field name="site_slider_1_season" type="text" label="TPL_MONAX_SITESLIDER_1_SEASON" description="TPL_MONAX_SITESLIDER_DESC_1_SEASON"></field>
+				<field name="site_slider_1_link" type="text" label="TPL_MONAX_SITESLIDER_1_LINK" description="TPL_MONAX_SITESLIDER_DESC_1_LINK"></field>
+
+				<field name="site_slider_2" type="media" label="TPL_MONAX_SITESLIDER_2" description="TPL_MONAX_SITESLIDER_DESC_2"></field>
+				<field name="site_slider_2_text" type="text" label="TPL_MONAX_SITESLIDER_2_TEXT" description="TPL_MONAX_SITESLIDER_DESC_2_TEXT"></field>
+				<field name="site_slider_2_season" type="text" label="TPL_MONAX_SITESLIDER_2_SEASON" description="TPL_MONAX_SITESLIDER_DESC_2_SEASON"></field>
+				<field name="site_slider_2_link" type="text" label="TPL_MONAX_SITESLIDER_2_LINK" description="TPL_MONAX_SITESLIDER_DESC_2_LINK"></field>
+
+				<field name="site_slider_3" type="media" label="TPL_MONAX_SITESLIDER_3" description="TPL_MONAX_SITESLIDER_DESC_3"></field>
+				<field name="site_slider_3_text" type="text" label="TPL_MONAX_SITESLIDER_3_TEXT" description="TPL_MONAX_SITESLIDER_DESC_3_TEXT"></field>
+				<field name="site_slider_3_season" type="text" label="TPL_MONAX_SITESLIDER_3_SEASON" description="TPL_MONAX_SITESLIDER_DESC_3_SEASON"></field>
+				<field name="site_slider_3_link" type="text" label="TPL_MONAX_SITESLIDER_3_LINK" description="TPL_MONAX_SITESLIDER_DESC_3_LINK"></field>
+
+				<field name="site_slider_4" type="media" label="TPL_MONAX_SITESLIDER_4" description="TPL_MONAX_SITESLIDER_DESC_4"></field>
+				<field name="site_slider_4_text" type="text" label="TPL_MONAX_SITESLIDER_4_TEXT" description="TPL_MONAX_SITESLIDER_DESC_4_TEXT"></field>
+				<field name="site_slider_4_season" type="text" label="TPL_MONAX_SITESLIDER_4_SEASON" description="TPL_MONAX_SITESLIDER_DESC_4_SEASON"></field>
+				<field name="site_slider_4_link" type="text" label="TPL_MONAX_SITESLIDER_4_LINK" description="TPL_MONAX_SITESLIDER_DESC_4_LINK"></field>
+
+				<field name="site_phone_1" type="text" label="TPL_MONAX_SITEPHONE_1" description="TPL_MONAX_SITEPHONE_DESC_1"></field>
+				<field name="site_phone_2" type="text" label="TPL_MONAX_SITEPHONE_2" description="TPL_MONAX_SITEPHONE_DESC_2"></field>
+				
+				<field name="site_soc_vk" type="text" label="TPL_MONAX_SITESOC_VK" description="TPL_MONAX_SITESOC_VK_DESC"></field>
+				<field name="site_soc_fb" type="text" label="TPL_MONAX_SITESOC_FB" description="TPL_MONAX_SITESOC_FB_DESC"></field>
+				<field name="site_soc_tw" type="text" label="TPL_MONAX_SITESOC_TW" description="TPL_MONAX_SITESOC_TW_DESC"></field>
+				<field name="site_soc_ig" type="text" label="TPL_MONAX_SITESOC_IG" description="TPL_MONAX_SITESOC_IG_DESC"></field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
